@@ -2,17 +2,18 @@
 #include <stdlib.h>
 
 //실습1
-int main(void)
+void print_star()
 {
 	int i;
-	
-	//*을 10개 출력하는 코드(동일한 코드가 3번 반복)
-	for( i=0; i<10; i++)
-	printf("*");
-	for( i=0; i<10; i++)
-	printf("*");
-	for( i=0; i<10; i++)
-	printf("*");
+	for(i=0; i<10; i++)    //공통부분을 함수로 정의
+	  printf("*");
+}
+
+int main(void)  //간단하게 함수 호출
+{
+	print_star();
+	print_star();
+	print_star();
 	
 	return 0;
 	
