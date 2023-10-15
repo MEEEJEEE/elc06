@@ -1,16 +1,40 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//실습2
-void func1(void){
-	int x;
-	printf("func1 x is at %p\n", &x);
+//실습3
+
+int sumTwo(int a, int b) {
+    return a + b;
 }
 
-int main(void){
-	int x;
-	printf("main x is at %p\n", &x);
-	func1(); //ppt에 func()라고 되어있었는데 오타인 것 같아 수정했습니다
-	
-	return 0;
+int square(int n) {
+    return n * n;
 }
+
+int get_max(int x, int y) {
+    if (x > y) {
+        return x;
+    } else {
+        return y;
+    }
+}
+
+int main(void) {
+    int num1 = 5;
+    int num2 = 7;
+
+
+    int sum = sumTwo(num1, num2);
+    printf("Sum of the two integers: %d\n", sum);
+
+
+    int squared = square(num1);
+    printf("Square of the first integer: %d\n", squared);
+
+
+    int max_num = get_max(num1, num2);
+    printf("Greater of the two integers: %d\n", max_num);
+
+    return 0;
+}
+
